@@ -10,6 +10,15 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    border: 1px solid #000000;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+
+  }
+ .product:hover {
+    cursor:pointer;
+      margin: 0px;
   }
   .product_rating{
     display: flex;
@@ -20,13 +29,16 @@
     object-fit: contain;
     margin-bottom: 15px;
   }
+  
   .product > button {
     background: #F0C14B;
     border: 1px solid;
     margin-top: 10px;
     border-color: #A88734 #9C7E31 #846A29;
     color: #111;
+  
   }
+ 
   .product_price {
     margin-top: 5px;
   }

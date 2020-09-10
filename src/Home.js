@@ -1,14 +1,42 @@
 import React from 'react';
 import './Home.css'
-import Product from './Product.js'
+import Product from './Product.js';
+import Carousel from 'react-bootstrap/Carousel'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
  function Home(){
-   return(
-   <div className='home'> 
-      <div className='home_container'>
-          <img className='home_image' src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg' alt=''/>
+    return(
+      <div className='home'> 
+       <div className='home_container'>
+         
+   <Carousel className='home_image'>
+  <Carousel.Item  >
+    <img
+      className="d-block w-100"
+      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_es_US_1x._CB432534552_.jpg"
+      alt="First slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Currency_v1_es_US_1x._CB428993289_.jpg"
+      alt="Third slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Toys_es_US_2x._CB431858162_.jpg"
+      alt="Third slide"
+    />
+  </Carousel.Item>
+</Carousel>
+  
+       
    <div className='home_row'>
      <Product
-     title='The lean startup'
+     title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
      price={100}
      rating={5}
      image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"

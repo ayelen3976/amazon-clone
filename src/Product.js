@@ -26,11 +26,11 @@ const [{basket}, dispatch] = useStateValue();
             <small>$</small>
             <strong>{price}</strong>
           </p>
-          <div className='product_rating'>
+          <div className='product_rating' >
               {Array(rating)
               .fill()
               .map((_, i)=>(
-              <p>🌟</p>
+              <p key={i}>🌟</p>
               ))}
        </div>
        </div>
