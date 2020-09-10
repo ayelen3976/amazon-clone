@@ -1,4 +1,4 @@
-https://amazon-clone-one.vercel.app/checkout //you can run the app
+run app: https://challenge-c052e.web.app/ 
 ### ` npm install`
 
 ### `npm start`
