@@ -6,7 +6,9 @@ import {Link, useHistory} from 'react-router-dom'
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import CurrencyFormat from'react-currency-format';
 import {getBasketTotal} from './reducer';
+import {db} from './firebase.js';
 import axios from './axios' ;
+
 
 function Payment() {
 const [{basket, user}, dispatch] = useStateValue();
@@ -34,25 +36,43 @@ useEffect(() =>{
     getClientSecret();
 },[basket])
 console.log ('THE SECRET IS>>>>', clientSecret)
+console.log('👱', user);
 
 const handleSubmit= async(event) =>{
     //do all the fancy stripe stuff...
     event.preventDefault();
     setProcessing(true);
 
-  const payload= await stripe .confirmCardPayment(clientSecret, {
+  const payload= await stripe.confirmCardPayment(clientSecret, {
     payment_method:{
       card: elements.getElement(CardElement)
     }
   }).then(({paymentIntent}) => {
 //paymentINtent == payment confirmation
+db
+.collection('users')
+                .doc(user?.uid)
+                .collection('orders')
+                .doc(paymentIntent.id)
+                .set({
+                    basket: basket,
+                    amount: paymentIntent.amount,
+                    created: paymentIntent.created
+                })
+
+
  setSucceeded(true);
  setError(null)
  setProcessing(false);
- history.replace('/orders')
- 
-  })
 
+ dispatch({
+   type:'EMPTY_BASKET'
+ })
+
+ history.replace('/orders');
+
+  })
+ 
 }
 const handleChange= event=>{
 //listen for the changes in the CardElement

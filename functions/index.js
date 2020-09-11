@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
-const stripe = require('stripe')('sk_test_51HQ2BMGy8mg5bsSgZ7zQ8nn2WvOLxEElROAVScUlRE2a3nkVwixfy5dk4SZCFDN2cvvRzMqM7jSI0vIXaE3L6r2K005SaWnWcY')
+const stripe = require('stripe')('sk_test_51HQ2BMGy8mg5bsSgZ7zQ8nn2WvOLxEElROAVScUlRE2a3nkVwixfy5dk4SZCFDN2cvvRzMqM7jSI0vIXaE3L6r2K005SaWnWcY');
 
 //API
 
@@ -20,14 +20,14 @@ app.post('/payments/create', async (request, response) =>{
     console.log('Payment request receiven Boom!!!  for this amount >>>', total)
 
     const paymentIntent = await stripe.paymentIntents.create({
-        amount:total, //subunits
-        currency:"usd",
-        description:"stripe integration testing"
+        amount: total, //subunits
+        currency: "ars",
+   
     })
 
     //ok-created
-    response .status(201).send({
-        clienttSecret: paymentIntent.client_secret,
+    response.status(201).send({
+        clientSecret: paymentIntent.client_secret,
     })
 })
 

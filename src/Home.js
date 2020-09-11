@@ -67,7 +67,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
    <Product
      id="3254354345"
      title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
-     price={1000}
+     price={10}
      rating={1}
      image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
    />
