@@ -13,8 +13,7 @@ const removeFromBasket = ()=> {
 
 }
   return(
-     
-  <div ref={ref} className="checkoutProduct">
+     <div ref={ref} className="checkoutProduct">
     
       <img className="checkoutProduct_image" src={image} alt=''/>
    <div className="checkoutProduct_info">
