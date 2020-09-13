@@ -30,15 +30,6 @@
     margin-bottom: 15px;
   }
   
-  .product > button {
-    background: #F0C14B;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: #A88734 #9C7E31 #846A29;
-    color: #111;
-  
-  }
- 
   .product_price {
     margin-top: 5px;
   }
@@ -47,3 +38,4 @@
     height: 100px;
     margin-bottom: 15px;
   }
+  

@@ -3,17 +3,12 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color:white;
+    border-radius: 7px;
    
 }
 .checkoutProduct_info {
     padding-left: 20px;
-}
-.checkoutProduct_info > button {
-    background: #F0C14B;
-    border: 1px solid;
-    margin-top: 10px;
-    background-color: #A88734 #9C7E31 #846A29;
-    color: #111;
 }
 .checkoutProduct_image {
     object-fit: contain;

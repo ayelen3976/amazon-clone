@@ -1,9 +1,11 @@
 import React,{ forwardRef } from 'react';
 import './CheckoutProduct.css';
 import {useStateValue} from './StateProvider'
+import {AwesomeButton, AwesomeButtonProgress, AwesomeButtonSocial,} from 'react-awesome-button';
+import "react-awesome-button/dist/styles.css";
+ 
 
-
-const CheckoutProduct = forwardRef(({id, image, title, price, rating}, ref)=>{
+const CheckoutProduct = forwardRef(({id, image, title, price, rating, hideButton }, ref)=>{
 const [{basket}, dispatch] = useStateValue();
 const removeFromBasket = ()=> {
     dispatch({
@@ -29,8 +31,10 @@ const removeFromBasket = ()=> {
         <p key={i}> 🌟</p>
         ))}
     </div>
-
-    <button onClick={removeFromBasket}>Remove from Basket</button>
+    {!hideButton && (
+           <button onClick={removeFromBasket}>Remove from Basket</button>
+        // <AwesomeButton  type="secondary" size="medium" action={removeFromBasket} >Remove from Basket</AwesomeButton>
+    )}
    </div>
   
   </div>

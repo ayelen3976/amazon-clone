@@ -1,11 +1,18 @@
+
 .login{
+    
     background-color: white;
     height: 100vh;
     display: flex;
     flex-direction:column;
     align-items: center;
+    background: rgb(124,80,45);
+    background: linear-gradient(0deg, rgba(124,80,45,0.7665441176470589) 31%, rgba(9,8,7,0.5228466386554622) 99%);
+
+    
 }
 .login_logo{
+    height: 50%;
     margin-top: 20px;
     margin-bottom:20px;
     object-fit:contain;

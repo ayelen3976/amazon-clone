@@ -6,11 +6,12 @@ import {Link, useHistory} from 'react-router-dom'
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import CurrencyFormat from'react-currency-format';
 import {getBasketTotal} from './reducer';
-import {db} from './firebase.js';
+import {db} from './firebase';
 import axios from './axios' ;
 
 
-function Payment() {
+
+function Payment({}) {
 const [{basket, user}, dispatch] = useStateValue();
 const history = useHistory();
 
@@ -25,7 +26,7 @@ const [clientSecret, setClientSecret]= useState(true);
 
 useEffect(() =>{
     //generate the special stripe secret which allow us the change a customer
-    const getClientSecret =async()=>{
+    const getClientSecret = async()=>{
         const response = await axios({
             method: 'post',
             //stripe expects the total in a currencies submities
@@ -38,38 +39,36 @@ useEffect(() =>{
 console.log ('THE SECRET IS>>>>', clientSecret)
 console.log('👱', user);
 
-const handleSubmit= async(event) =>{
+const handleSubmit = async(event) => {
     //do all the fancy stripe stuff...
     event.preventDefault();
     setProcessing(true);
 
-  const payload= await stripe.confirmCardPayment(clientSecret, {
-    payment_method:{
-      card: elements.getElement(CardElement)
-    }
-  }).then(({paymentIntent}) => {
+    const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method:{
+        card: elements.getElement(CardElement)
+     }
+    }).then(({paymentIntent}) => {
 //paymentINtent == payment confirmation
-db
-.collection('users')
-                .doc(user?.uid)
-                .collection('orders')
-                .doc(paymentIntent.id)
-                .set({
-                    basket: basket,
-                    amount: paymentIntent.amount,
-                    created: paymentIntent.created
-                })
+    db
+    .collection('users')
+    .doc(user?.uid)
+    .collection('orders')
+    .doc(paymentIntent.id)
+    .set({
+        basket: basket,
+        amount: paymentIntent.amount,
+        created: paymentIntent.created
+    })
+    
+setSucceeded(true);    
+setError(null)    
+setProcessing(false)
+       dispatch({
+         type: 'EMPTY_BASKET'
+}      )
 
-
- setSucceeded(true);
- setError(null)
- setProcessing(false);
-
- dispatch({
-   type:'EMPTY_BASKET'
- })
-
- history.replace('/orders');
+      history.replace('/orders');
 
   })
  
@@ -84,7 +83,7 @@ setError(event.error ? event.error.message : '')
     return(
     <div className="payment">
         <div className="payment_container">
-            <h1>Checkout (<Link to='/checkout'>{basket?.length} </Link>)</h1>
+            <h1>Checkout (<Link to='/checkout'> {basket?.length} </Link>)</h1>
 
           {/*payment section-delivery address */}
            <div className="payment_section">
@@ -142,7 +141,7 @@ setError(event.error ? event.error.message : '')
                         prefix={'$'}
                         />
                         <button disabled={processing || disabled || succeeded }>
-                        <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>
+                          <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>
                         </button>
                       </div>
                       {/*error*/}

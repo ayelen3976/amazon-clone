@@ -1,8 +1,10 @@
-import React from 'react';
+import React , { Component } from 'react';
 import './Home.css'
 import Product from './Product.js';
 import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import ReactPlayer from 'react-player'
 
  function Home(){
     return(
@@ -13,21 +15,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   <Carousel.Item  >
     <img
       className="d-block w-100"
-      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_es_US_1x._CB432534552_.jpg"
+      src="https://scontent.faep5-1.fna.fbcdn.net/v/t1.0-9/118694967_10221685730829213_4820922168269109743_o.jpg?_nc_cat=100&_nc_sid=825194&_nc_ohc=KqYPCfkEw8AAX8CGiIm&_nc_ht=scontent.faep5-1.fna&oh=ade0d4e3f7c0cfeed4f3f698a2633eaf&oe=5F81C19C"
       alt="First slide"
     />
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Currency_v1_es_US_1x._CB428993289_.jpg"
+      src="https://cdn.pocket-lint.com/r/s/1200x630/assets/images/120309-phones-buyer-s-guide-best-smartphones-2020-the-top-mobile-phones-available-to-buy-today-image1-eagx1ykift.jpg"
       alt="Third slide"
     />
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Toys_es_US_2x._CB431858162_.jpg"
+      src="https://d1i5n1u2fq2wa3.cloudfront.net/y7ItIQy9T-6E2QUOH9E4lw.jpg"
       alt="Third slide"
     />
   </Carousel.Item>
@@ -35,52 +37,110 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   
        
    <div className='home_row'>
+      <Product
+            id='11'
+            title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
+            price={200}
+            rating={1}
+            image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+          />
      <Product
-     title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-     price={100}
-     rating={5}
-     image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
-   />
-   <Product
-     id="49538094"
-     title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-     price={230}
-     rating={4}
-     image="https://images-na.ssl-images-amazon.com/images/I/91gRKbX%2BS8L._AC_SL1500_.jpg"
-   />
- </div>
- <div className="home_row">
-   <Product
-     id="4903850"
-     title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-     price={200}
+       id='222'
+     title="Notebook ASUS Um431 Ryzen 5 8gb Ssd 512gb 14 Lector Huella"
+     price={127.395}
      rating={3}
-     image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+     image="https://pccenter.com.ar/wp-content/uploads/2020/07/Um431.jpg"
    />
    <Product
-     id="23445930"
-     title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
-     price={30}
+     id='333'
+     title="Skullcandy Crusher ANC Wireless Headphones"
+     price={230}
      rating={5}
-     image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+     image="https://www.cornellstore.com/site/Product_images/10015212_media-01.jpg?resizeid=3&resizeh=300&resizew=300"
    />
-   <Product
-     id="3254354345"
-     title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
-     price={10}
-     rating={1}
-     image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
-   />
- </div>
- <div className="home_row">
-   <Product
-     id="90829332"
-     title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor -  Super Ultra Wide Dual WQHD 5120 x1440"
-     price={3500}
-     rating={4}
-     image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
-   />
-    </div>
+     <Product
+            id='000'
+            title="Notebook HP Probook 450 G7 Core I5 10ma 8gb 1tb Win10 Pro"
+            price={117}
+            rating={5}
+            image="https://pccenter.com.ar/wp-content/uploads/2020/08/HP450-1.jpg"
+     />
+ </div> 
+       <div className="home_row">
+          <Product
+            id='444'
+            title="Sillón Pro Gamer Legend Negro con Rojo"
+            price={200}
+            rating={3}
+            image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRHva7Yt2sZ55BgJbtajihalOUkDvTfwKf5JVWXnG1yTGRYXZb93PxFieO7wnW6TWLTBH0MwkVxs-k&usqp=CAc"
+          />
+          
+          <Product
+            id='555'
+            title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
+            price={10}
+            rating={1}
+            image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
+          />
+               <Product
+            id='66'
+            title="Logitech C270 Webcam"
+            price={10}
+            rating={1}
+            image="https://www.cornellstore.com/site/Product_images/1565877_media-01.jpg?resizeid=3&resizeh=300&resizew=300"
+          />
+        </div>
+        <div>
+        <ReactPlayer
+          url='https://youtu.be/tUUElxEGo0U'
+          className='react-player'
+          playing
+          allow='autoplay; encrypted-media'
+          allowFullScreen
+          title='video'
+          width='100%'
+          height='500px'
+        />
+      </div>
+        <div className="home_row">
+          <Product
+            id='777'
+            title="PlayStation®4 de 1 TB con FIFA 20 Standard EditionPS4 1 TB + FIFA 20 Standard EditionExperimenta la inteligencia futbolística"
+            price={200}
+            rating={3}
+            image="https://arsonyb2c.vteximg.com.br/arquivos/ids/282769-370-370/PS4-1TB-FIFA-20.jpg?v=637063966561870000"
+          />
+          <Product
+            id='888'
+            title="PlayStation®4 de 1 TB con FIFA 20 Standard EditionPS4 1 TB + FIFA 20 Standard EditionExperimenta la inteligencia futbolística"
+            price={30}
+            rating={5}
+            image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+          />
+          <Product
+            id='999'
+            title="Logitech M310 Wireless Mouse"
+            price={10}
+            rating={1}
+            image="https://www.cornellstore.com/site/Product_images/9005056_media-Red-01.jpg?resizeid=3&resizeh=300&resizew=300"
+          />
+        </div>
+        <div className="home_row">
+          <Product
+            id='10101'
+            title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor -  Super Ultra Wide Dual WQHD 5120 x1440"
+            price={3500}
+            rating={4}
+            image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
+          />
+               <Product
+            id='1212'
+            title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
+            price={10}
+            rating={1}
+            image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTGxzzguMgbj-Vc77bcJuIrtpxKQIypNOHWGq8HRzRTu1zSBdKRyb--m6azFwHAR9fofnee9Pve6zx-cq1STI18F2UM21S0aJEiFJyQN5LxMgcmRoPvYomL&usqp=CAE"
+          />
+        </div>
    </div>
   </div>
    )  

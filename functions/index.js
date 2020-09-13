@@ -9,11 +9,13 @@ const stripe = require('stripe')('sk_test_51HQ2BMGy8mg5bsSgZ7zQ8nn2WvOLxEElROAVS
 const app= express();
 
 //middleware 
-app.use(cors({origin: true}));
+// app.use(cors({origin: true}));
+app.use(cors({origin:'https://challenge-c052e.web.app/'}))
 app.use(express.json());
 
 // API routes
 app.get('/', (request, response) => response.status(200).send('Hello World'))
+
 app.post('/payments/create', async (request, response) =>{
     const total = request.query.total;
 

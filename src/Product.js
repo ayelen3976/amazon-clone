@@ -1,6 +1,8 @@
 import React from 'react';
 import './Product.css';
 import {useStateValue} from './StateProvider'
+import {AwesomeButton, AwesomeButtonProgress, AwesomeButtonSocial,} from 'react-awesome-button';
+import "react-awesome-button/dist/styles.css";
  
 function Product({id, title, image, price, rating}){
 const [{basket}, dispatch] = useStateValue();
@@ -34,9 +36,11 @@ const [{basket}, dispatch] = useStateValue();
               ))}
        </div>
        </div>
+     
       <img src={image} alt=''/>
+      {/* <AwesomeButtonProgress  type="secondary" size="medium" action={addToBasket} >Add to Basket</AwesomeButtonProgress> */}
       <button onClick={addToBasket}>Add to Basket</button>
-     </div>
+      </div>
     )
  }
- export default Product;
+ export default Product;  

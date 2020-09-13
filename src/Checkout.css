@@ -3,9 +3,13 @@
     padding: 20px;
     background-color: white;
     height: max-content;
+    background: rgb(124,80,45);
+    background: linear-gradient(0deg, rgba(124,80,45,0.7665441176470589) 31%, rgba(9,8,7,0.5228466386554622) 99%);
+   
 }
 .checkout_add{
-    width: 100%;
+    height: fit-content;
+     width: 100%;
     margin-bottom: 10px;
 }
 .checkout_title{
@@ -13,3 +17,16 @@
     padding: 10px;
     border-bottom: 1px solid lightgrey;
 }
+.checkout_left{
+    width: 1000px
+    
+}
+.home__image{
+    height:200px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+ 
+}
+
+
