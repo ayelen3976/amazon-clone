@@ -32,8 +32,8 @@ const removeFromBasket = ()=> {
         ))}
     </div>
     {!hideButton && (
-           <button onClick={removeFromBasket}>Remove from Basket</button>
-        // <AwesomeButton  type="secondary" size="medium" action={removeFromBasket} >Remove from Basket</AwesomeButton>
+           //<button onClick={removeFromBasket}>Remove from Basket</button>
+        <AwesomeButton  type="secondary" size="medium" action={removeFromBasket} >Remove from Basket</AwesomeButton>
     )}
    </div>
   

@@ -15,7 +15,7 @@ import ReactPlayer from 'react-player'
   <Carousel.Item  >
     <img
       className="d-block w-100"
-      src="https://scontent.faep5-1.fna.fbcdn.net/v/t1.0-9/118694967_10221685730829213_4820922168269109743_o.jpg?_nc_cat=100&_nc_sid=825194&_nc_ohc=KqYPCfkEw8AAX8CGiIm&_nc_ht=scontent.faep5-1.fna&oh=ade0d4e3f7c0cfeed4f3f698a2633eaf&oe=5F81C19C"
+      src="https://www.xtrafondos.com/descargar.php?id=5036&resolucion=3840x2160"
       alt="First slide"
     />
   </Carousel.Item>

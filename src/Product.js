@@ -38,8 +38,10 @@ const [{basket}, dispatch] = useStateValue();
        </div>
      
       <img src={image} alt=''/>
-      {/* <AwesomeButtonProgress  type="secondary" size="medium" action={addToBasket} >Add to Basket</AwesomeButtonProgress> */}
-      <button onClick={addToBasket}>Add to Basket</button>
+       <AwesomeButtonProgress  type="secondary" size="medium" 
+       action={(element, next)=> addToBasket(element)} >
+           Add to Basket</AwesomeButtonProgress> 
+      {/* <button onClick={addToBasket}>Add to Basket</button> */}
       </div>
     )
  }
