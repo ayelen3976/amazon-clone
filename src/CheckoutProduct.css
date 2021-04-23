@@ -23,3 +23,18 @@
     font-size: 17px;
     font-weight: 800;
 }
+@media only screen and (max-width: 680px) {
+    .checkoutProduct {
+        text-align: -webkit-center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 7px;
+        display: block;
+
+    }
+    .checkoutProduct_info {
+        text-align: center;
+    }
+      }
+

@@ -65,3 +65,22 @@ margin-right: 10px;
     margin-right: 10px;
     color: white;
 }
+@media only screen and (max-width: 680px) {
+   .header_logo {
+        height: 30px;
+        width: 100px;
+        margin-top: 18px;
+        margin-left: 20px;
+        margin-right: 20px;
+        object-fit: contain;
+    }
+    .header {
+        height: 120px;
+        background-color: #131921;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display:block;
+    }
+  }

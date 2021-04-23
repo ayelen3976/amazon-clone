@@ -27,6 +27,23 @@
     width: 100%;
     overflow: hidden;
  
-}
+} 
+@media only screen and (max-width: 680px) {
+    .checkout{
+        flex-flow: wrap-reverse;
+        display: flex;
+        padding: 20px;
+        background-color: white;
+        height: max-content;
+        background: rgb(124,80,45);
+        background: linear-gradient(0deg, rgba(124,80,45,0.7665441176470589) 31%, rgba(9,8,7,0.5228466386554622) 99%);
+       
+    }
+    .home__image{
+     display: none;
+     
+    }
+      }
+
 
 

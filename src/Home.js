@@ -29,7 +29,7 @@ import ReactPlayer from 'react-player'
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://d1i5n1u2fq2wa3.cloudfront.net/y7ItIQy9T-6E2QUOH9E4lw.jpg"
+      src="https://cms-assets.tutsplus.com/uploads/users/1631/posts/32590/image/Gaming%20Vlogger%20Channel%20Banner%20Maker%20copy.jpg"
       alt="Third slide"
     />
   </Carousel.Item>

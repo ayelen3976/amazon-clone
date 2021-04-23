@@ -27,4 +27,15 @@
 img {
     height: 400px;
   }
-
+  @media only screen and (max-width: 680px) {
+    .home_row{
+        display: table-header-group;
+        z-index: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+     
+    }
+    img {
+        height: 200px;
+      }
+  }
